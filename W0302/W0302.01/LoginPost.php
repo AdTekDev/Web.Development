@@ -47,10 +47,26 @@
       <p class="card-text" id="ketqua"> 
 
         <?php  
-            $username =  $_GET["UserName"];
-            $password =  $_GET["Password"];
+            $username =  $_POST["UserName"];
+            $password =  $_POST["Password"];
+            $error = "";
+            $koloiSubmit = true;
 
-            echo "Login vào Server: " . $username . " / " . $password; 
+            $lenname = strlen($username);
+            if ($lenname == 0 || $lenname > 30 ) {
+                $error = $error . " .Lỗi Username !";
+                $koloiSubmit = false;
+            }
+            if (strlen($password) < 6) {
+                $error = $error . " .Lỗi Password !";
+                $koloiSubmit = false;
+            }
+
+            if ($username == $password) {
+                $error = $error . " . Đủ điều kiện đăng nhập !!!";
+            }
+            echo "Login vào Server: " . $username 
+                . " / " . $password . " " . $error; 
         ?>   
 
       </p>
@@ -79,6 +95,7 @@ function callSubmit() {
         chophepSubmit = false;
     }
 
+
     // Code submit ở đây 
     if (chophepSubmit) {
         document.getElementById("FormLogin").submit();
@@ -86,6 +103,7 @@ function callSubmit() {
         // hiển thị thông báo lỗi ...
         document.getElementById("ketqua").innerText = error;
     }
+    document.getElementById("FormLogin").submit();
 
 }
 </script>
