@@ -3,6 +3,9 @@
 ##Repl.it 
 - https://replit.com/
 
+##W3Schools
+- https://www.w3schools.com/
+
 ##Github.com 
 - https://github.com/AdTekDev/Web.Development 
 
@@ -18,3 +21,4 @@
 
 ##Figma
 - https://www.figma.com/login
+
