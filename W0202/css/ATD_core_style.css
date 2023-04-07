@@ -1,0 +1,10 @@
+.input-group-text {
+    min-width: 126px;
+}
+button {
+    min-width: 126px;
+}
+pre{ 
+    max-height: 200px;
+    overflow: scroll;
+}
