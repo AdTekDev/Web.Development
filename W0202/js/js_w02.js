@@ -30,9 +30,20 @@ function  XacDinhTamGiac() {
         ketqua = "Bạn nhập cai gì vậy ?! Đây không phải là tam giác !";
     }
     
-
+    heso = 10;
+    cx = (soA*heso);
+    cosB = (soA**2 + soC**2 - soB**2)/(2*soA*soC);
+    sinB = Math.sqrt(1 - cosB**2);
+    ax = Math.round(soC*cosB)*heso;
+    ay = Math.round(soC*sinB)*heso;
     document.getElementById("DataKetQua").innerHTML 
     = ketqua
+    + "<svg height='600' width='600'>"
+    + "<polygon points=' 0,0  "
+    + cx + ",0 "
+    + ax + "," + ay + " ' "
+    + "stroke='black' stroke-width='3' fill='red' />  </svg>"
+    ;
 }
 
 function  TinhToan() {
