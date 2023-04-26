@@ -1,0 +1,5 @@
+1. Account 
+      $server = "localhost";
+      $dbUsername = "db01";
+      $dbPassword = "Nh[gwIHsa[8W0rNQ";
+      $dbName = "web_phone";
